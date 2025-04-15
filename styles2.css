@@ -1,0 +1,200 @@
+/* styles2.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa /* Light background */
+}
+
+header {
+    background: linear-gradient(to right, #007bff, #007bff); /*#17a2b8 Gradient background */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  cursor:pointer;
+}
+
+.s1{
+  border-radius: 25px;
+  border: 1px solid rgba(0,0,0,0.50);
+  padding: 10px; 
+  width: 100%;
+  height: 10px;
+  cursor:text;
+}
+
+img{
+    height: 80px;
+    width: 180px;
+    justify-content:center;
+}
+
+
+.logo {
+    font-weight: bold;
+    font-size: 2em; /* Increased logo size */
+    color: rgba(25,50,75,100);   
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 30px; /* Increased spacing */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.logout-button{
+  background-color: #ffc107; 
+  color: #333;
+  padding: 10px 20px;
+  
+  text-decoration: none;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover{
+    background-color:#007bff;
+}
+
+nav a:hover {
+    color: #ddd; /* Lighter color on hover */
+}
+
+.hero {
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+/*    color: #555;*/
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px; /* Larger button */
+    background-color: #ffc107; /* Yellow button */
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 30px;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px); /* Lift on hover */
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
+}
+
+main {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #343a40; /* Darker heading color */
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Larger cards */
+    gap: 30px;    
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent content from overflowing rounded corners */
+    transition: transform 0.2s ease;
+}
+.card:hover{
+    transform: scale(1.03);
+}
+
+.card-content { /* Added a wrapper for content */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #212529;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}

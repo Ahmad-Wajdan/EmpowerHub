@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empower Hub</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div id="signup-form" class="form-container">
+            <u><h2>Create An Account</h2></u>
+            <form action="Backend">
+                <label for="signup-username">Username:</label>
+                <input type="text" id="signup-username" name="username" placeholder="Username*" required><br><br>
+
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="email" placeholder="Email*" required><br><br>
+
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="password" placeholder="Password*" required><br><br>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="switch-form" id="to-login">Already have an account? Log in</div>
+        </div>
+
+        <div id="login-form" class="form-container" style="display: none;">
+            <u><h2>LOG IN</h2></u>
+            <form action="LoginServlet">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="username" placeholder="Username*" equired><br><br>
+
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" placeholder="Password*" required><br><br>
+
+                <button type="submit">Log In</button>
+            </form>
+            <div class="switch-form" id="to-signup">Need an account? Sign up</div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const signupForm = document.getElementById('signup-form');
+        const loginForm = document.getElementById('login-form');
+
+        const switchToLogin = document.getElementById('to-login');
+        const switchToSignup = document.getElementById('to-signup');
+
+        switchToLogin.addEventListener('click', () => {
+            signupForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+
+        switchToSignup.addEventListener('click', () => {
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+        });
+    });
+    </script>
+</body>
+</html>

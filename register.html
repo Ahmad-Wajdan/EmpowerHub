@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empower Hub</title>
+<!--    <link rel="stylesheet" href="styles1.css" type="text/css"/>-->
+    <link rel="stylesheet" href="styles.css" type="text/css"/> 
+
+</head>
+<body>
+<div class="container">
+    <div id="login-form" class="form-container" style="display: none;">
+        <h2>Log In</h2>
+        <form action="LoginServlet" >
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="username" required><br><br>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required><br><br>
+
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+</div>
+<!--<script src="script.js"></script>-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const signupForm = document.getElementById('signup-form');
+    const loginForm = document.getElementById('login-form');
+
+    const switchForm = document.createElement('div');
+    switchForm.className = 'switch-form';
+    switchForm.textContent = 'Already have an account? Log in';
+    signupForm.appendChild(switchForm);
+
+    const switchFormLogin = document.createElement('div');
+    switchFormLogin.className = 'switch-form';
+    switchFormLogin.textContent = 'Need an account? Sign up';
+    loginForm.appendChild(switchFormLogin);
+
+    switchForm.addEventListener('click', () => {
+        signupForm.style.display = 'none';
+        loginForm.style.display = 'block';
+    });
+
+    switchFormLogin.addEventListener('click', () => {
+        loginForm.style.display = 'none';
+        signupForm.style.display = 'block';
+    });
+});
+</script>
+</body>
+</html>
+
